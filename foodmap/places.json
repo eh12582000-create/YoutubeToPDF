@@ -1,0 +1,120 @@
+{
+  "_說明": [
+    "美食地圖資料庫：從影片筆記收錄的店家。",
+    "新增規則：先跑 python3 build_map.py --check 店名 確認不重複，再加進 places。",
+    "name = 影片/筆記裡的叫法；name_official = 查證過的正式店名（日文原文），沒查到就 null 並 confirmed: false。",
+    "改完跑 python3 build_map.py 重建 map.html 和 places.csv。"
+  ],
+  "places": [
+    {
+      "name": "無敵達德哥",
+      "name_official": null,
+      "confirmed": false,
+      "type": "烏龍麵",
+      "area": "東京・池袋",
+      "note": "福岡系手打烏龍，刀切不規則麵體超Q彈，鴨湯冷沾烏龍；疑為「大地のうどん」東池袋店，待確認",
+      "source": "https://www.youtube.com/watch?v=EWSRymVMMuo",
+      "source_title": "東京美食池袋篇：24小時爽吃五選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "Kitchen ABC",
+      "name_official": "キッチンABC 池袋東口店",
+      "confirmed": true,
+      "type": "洋食・咖哩",
+      "area": "東京・池袋",
+      "note": "在地人排隊平價洋食，招牌薑燒豬肉＋黑咖哩雙拼，極度下飯",
+      "source": "https://www.youtube.com/watch?v=EWSRymVMMuo",
+      "source_title": "東京美食池袋篇：24小時爽吃五選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "麵屋糊塗",
+      "name_official": "麺屋Hulu-lu",
+      "confirmed": true,
+      "type": "拉麵",
+      "area": "東京・池袋",
+      "note": "清爽醬油SOBA細麵，夏威夷風，附SPAM飯糰，叉燒軟嫩易碎",
+      "source": "https://www.youtube.com/watch?v=EWSRymVMMuo",
+      "source_title": "東京美食池袋篇：24小時爽吃五選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "麵廚花田",
+      "name_official": "麺処 花田 池袋店",
+      "confirmed": true,
+      "type": "拉麵",
+      "area": "東京・池袋",
+      "note": "濃郁味噌拉麵（食べログ3.73），現炒豆芽、五花叉燒，冬天首選",
+      "source": "https://www.youtube.com/watch?v=EWSRymVMMuo",
+      "source_title": "東京美食池袋篇：24小時爽吃五選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "活美的利",
+      "name_official": "回し寿司 活美登利 西武池袋店",
+      "confirmed": true,
+      "type": "回轉壽司",
+      "area": "東京・池袋",
+      "note": "西武池袋8樓，飛魚卵軍艦、和牛炙燒、味噌蝦，新鮮度有保障",
+      "source": "https://www.youtube.com/watch?v=EWSRymVMMuo",
+      "source_title": "東京美食池袋篇：24小時爽吃五選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "炭火燒まる",
+      "name_official": null,
+      "confirmed": false,
+      "type": "雞料理・親子丼",
+      "area": "東京・中目黑",
+      "note": "雞肉料理專門店：特上鵝肝親子丼、雞白湯拉麵、生雞肉青椒肉絲；正式店名待確認",
+      "source": "https://www.youtube.com/watch?v=UmzMmn1A8uQ",
+      "source_title": "東京美食中目黑篇：爽吃四選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "聖林館",
+      "name_official": "聖林館（Seirinkan）",
+      "confirmed": true,
+      "type": "披薩",
+      "area": "東京・中目黑",
+      "note": "Napoli 披薩專門店（食べログ3.70），只賣瑪格莉特和水手兩種，窯烤",
+      "source": "https://www.youtube.com/watch?v=UmzMmn1A8uQ",
+      "source_title": "東京美食中目黑篇：爽吃四選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "Starbucks Reserve Roastery 中目黑",
+      "name_official": "スターバックス リザーブ ロースタリー 東京",
+      "confirmed": true,
+      "type": "咖啡・甜點",
+      "area": "東京・中目黑",
+      "note": "目黑川旁旗艦店，アマゾネス生麵團甜甜圈，散步順路景點",
+      "source": "https://www.youtube.com/watch?v=UmzMmn1A8uQ",
+      "source_title": "東京美食中目黑篇：爽吃四選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "屋台餃子 安倍味",
+      "name_official": "めぐろの安兵衛",
+      "confirmed": true,
+      "type": "餃子・居酒屋",
+      "area": "東京・目黑",
+      "note": "高知屋台餃子名店東京分店，薄皮炸餃子外酥內多汁，比惠比壽店好排",
+      "source": "https://www.youtube.com/watch?v=UmzMmn1A8uQ",
+      "source_title": "東京美食中目黑篇：爽吃四選",
+      "added": "2026-07-12"
+    },
+    {
+      "name": "Beef Kitchen",
+      "name_official": "Beef Kitchen 中目黒店",
+      "confirmed": true,
+      "type": "和牛燒肉",
+      "area": "東京・中目黑",
+      "note": "燒肉百名店，套餐 6400 日幣：生和牛塔塔、厚切牛舌、肋眼星、燒版壽喜燒",
+      "source": "https://www.youtube.com/watch?v=UmzMmn1A8uQ",
+      "source_title": "東京美食中目黑篇：爽吃四選",
+      "added": "2026-07-12"
+    }
+  ]
+}
