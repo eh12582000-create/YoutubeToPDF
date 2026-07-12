@@ -135,6 +135,25 @@ def build_html(places: list[dict]):
     (ROOT / "map.html").write_text(doc)
 
 
+def build_md(places: list[dict]):
+    """Obsidian 用的 Markdown 清單（symlink 進 vault 後自動同步）"""
+    areas = {}
+    for p in places:
+        areas.setdefault(p["area"], []).append(p)
+    lines = ["# 🍜 美食清單", "",
+             f"> 共 {len(places)} 家｜資料來源 places.json｜"
+             f"手機導航用 [map.html](map.html)｜新增：貼影片連結給 Claude 說「加進美食地圖」", ""]
+    for area in sorted(areas):
+        lines.append(f"## 📍 {area}")
+        for p in sorted(areas[area], key=lambda x: x["type"]):
+            name = p.get("name_official") or p["name"]
+            unc = "" if p.get("confirmed") else "（店名待確認）"
+            lines.append(f"- **{name}**{unc}｜{p['type']}｜{p['note']}")
+            lines.append(f"  [Google Maps]({maps_url(p)})｜[來源影片]({p['source']})")
+        lines.append("")
+    (ROOT / "美食清單.md").write_text("\n".join(lines))
+
+
 def main():
     if len(sys.argv) >= 3 and sys.argv[1] == "--check":
         sys.exit(check(" ".join(sys.argv[2:])))
@@ -147,7 +166,8 @@ def main():
         dup[k] = p
     build_html(places)
     build_csv(places)
-    print(f"🗺️ 已重建 map.html + places.csv（共 {len(places)} 家）")
+    build_md(places)
+    print(f"🗺️ 已重建 map.html + places.csv + 美食清單.md（共 {len(places)} 家）")
 
 
 if __name__ == "__main__":
