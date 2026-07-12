@@ -7,6 +7,18 @@
   ],
   "places": [
     {
+      "name": "冰茶專賣店-拉莫分部",
+      "name_official": "冰茶專賣店-拉莫分部 Iced Tea Shop Ramos",
+      "confirmed": true,
+      "type": "甜點・特調飲品",
+      "area": "台北・西門町",
+      "address": "台北市萬華區昆明街96巷6-1號",
+      "note": "暗門隱藏版大人系甜點店；夏季芒果塔/大泡芙/聖多諾黑，特調芒果拉莫士、花心芭樂；19:00–02:00（五六到04:00）週一休，西門站6號出口6分鐘，inline訂位",
+      "source": "https://www.instagram.com/reel/DaiGJVlJt8b/",
+      "source_title": "IG @13.yummap 西門町隱藏甜點",
+      "added": "2026-07-12"
+    },
+    {
       "name": "無敵達德哥",
       "name_official": null,
       "confirmed": false,

@@ -40,10 +40,15 @@ def check(query: str) -> int:
     return 0
 
 
-def maps_url(p: dict) -> str:
+def maps_query(p: dict) -> str:
+    """有地址用「店名 地址」最準，沒有就「店名 區域」"""
     name = p.get("name_official") or p["name"]
-    area = p["area"].split("・")[-1]
-    return "https://www.google.com/maps/search/?api=1&query=" + quote(f"{name} {area}")
+    loc = p.get("address") or p["area"].split("・")[-1]
+    return f"{name} {loc}"
+
+
+def maps_url(p: dict) -> str:
+    return "https://www.google.com/maps/search/?api=1&query=" + quote(maps_query(p))
 
 
 def build_csv(places: list[dict]):
@@ -53,8 +58,7 @@ def build_csv(places: list[dict]):
         w.writerow(["名稱", "搜尋關鍵字", "類型", "區域", "備註", "來源影片"])
         for p in places:
             name = p.get("name_official") or p["name"]
-            area = p["area"].split("・")[-1]
-            w.writerow([name, f"{name} {area}", p["type"], p["area"], p["note"], p["source"]])
+            w.writerow([name, maps_query(p), p["type"], p["area"], p["note"], p["source"]])
 
 
 CSS = """
